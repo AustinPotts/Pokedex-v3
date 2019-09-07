@@ -14,6 +14,7 @@
 		45F0F75F232430F200B4FF8A /* PokemonTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0F75E232430F200B4FF8A /* PokemonTeamTableViewController.swift */; };
 		45F0F7612324310700B4FF8A /* PokemonSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0F7602324310700B4FF8A /* PokemonSearchViewController.swift */; };
 		45F0F7642324318000B4FF8A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0F7632324318000B4FF8A /* Pokemon.swift */; };
+		45F0F7672324329B00B4FF8A /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0F7662324329B00B4FF8A /* ApiController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		45F0F75E232430F200B4FF8A /* PokemonTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTeamTableViewController.swift; sourceTree = "<group>"; };
 		45F0F7602324310700B4FF8A /* PokemonSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSearchViewController.swift; sourceTree = "<group>"; };
 		45F0F7632324318000B4FF8A /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		45F0F7662324329B00B4FF8A /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		45F0F74023242A2E00B4FF8A = {
 			isa = PBXGroup;
 			children = (
+				45F0F7662324329B00B4FF8A /* ApiController.swift */,
 				45F0F7652324324600B4FF8A /* Model */,
 				45F0F7622324316E00B4FF8A /* View Controllers */,
 				45F0F74B23242A2E00B4FF8A /* Pokedex-v3 */,
@@ -159,6 +162,7 @@
 			files = (
 				45F0F75F232430F200B4FF8A /* PokemonTeamTableViewController.swift in Sources */,
 				45F0F7642324318000B4FF8A /* Pokemon.swift in Sources */,
+				45F0F7672324329B00B4FF8A /* ApiController.swift in Sources */,
 				45F0F7612324310700B4FF8A /* PokemonSearchViewController.swift in Sources */,
 				45F0F74D23242A2E00B4FF8A /* AppDelegate.swift in Sources */,
 			);
