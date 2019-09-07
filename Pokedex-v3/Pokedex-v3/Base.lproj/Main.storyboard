@@ -63,6 +63,9 @@
                         <viewLayoutGuide key="safeArea" id="NyF-Iz-MDM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search for Pokemon" id="4qp-zF-c9J"/>
+                    <connections>
+                        <outlet property="searchBar" destination="m6K-DQ-2hH" id="0Dt-vV-6Il"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwc-aw-JNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,12 +10,14 @@ import Foundation
 
 class PokemonController {
     
+    
+    
     let baseURL = URL(string: "https://pokeapi.co//api/v2/pokemon/")!
     
     func getPokemon(searchTerm: String, completion: @escaping (Result<Pokemon, Error>)-> Void){
         
         //Append search Term to url
-        let requestURL = baseURL.appendingPathComponent(searchTerm)
+        let requestURL = baseURL.appendingPathComponent(searchTerm.lowercased())
         
         
         URLSession.shared.dataTask(with: requestURL) { (data, _, error) in

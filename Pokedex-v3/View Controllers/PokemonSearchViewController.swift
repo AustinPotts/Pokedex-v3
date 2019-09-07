@@ -8,23 +8,38 @@
 
 import UIKit
 
-class PokemonSearchViewController: UIViewController {
+class PokemonSearchViewController: UIViewController, UISearchBarDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    let pokemonController = PokemonController()
+    var pokemon: Pokemon? {
+        didSet {
+            updateViews()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        searchBar.delegate = self
+        
     }
-    */
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text else {return}
+        pokemonController.getPokemon(searchTerm: searchTerm) { (pokemon) in
+            guard let searchedPokemon = try? pokemon.get() else {return}
+            DispatchQueue.main.async {
+                self.pokemon = searchedPokemon
+            }
+        }
+    }
+    
+    func updateViews() {
+        guard isViewLoaded else {return}
+        guard let pokemon = pokemon else {return}
+        title = pokemon.name.capitalized + " " + "ID: \(pokemon.id)"
+    }
+  
 
 }
