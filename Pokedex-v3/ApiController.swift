@@ -10,7 +10,7 @@ import Foundation
 
 class PokemonController {
     
-    
+    var pokemonTeam: [Pokemon] = []
     
     let baseURL = URL(string: "https://pokeapi.co//api/v2/pokemon/")!
     
@@ -50,6 +50,10 @@ class PokemonController {
             
         }.resume()
         
+    }
+    
+    func addPokemon(pokemon: Pokemon){
+        pokemonTeam.append(pokemon)
     }
     
 }
